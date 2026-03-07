@@ -25,3 +25,5 @@ jobs:
 
       - name: Show runner operating system
         run: echo "Running on $RUNNER_OS"
+      - name: Fail step
+        run: exit 1
