@@ -1,0 +1,13 @@
+name: Nightly Job
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  scheduled-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print scheduled run
+        run: echo "Scheduled workflow running"
