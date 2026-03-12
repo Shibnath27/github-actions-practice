@@ -1,0 +1,42 @@
+name: Multi OS Runner Test
+
+on:
+  push:
+
+jobs:
+
+  ubuntu-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print OS
+        run: echo "Running on Ubuntu"
+
+      - name: Show hostname
+        run: hostname
+
+      - name: Show current user
+        run: whoami
+
+  windows-job:
+    runs-on: windows-latest
+    steps:
+      - name: Print OS
+        run: echo Running on Windows
+
+      - name: Show hostname
+        run: hostname
+
+      - name: Show current user
+        run: whoami
+
+  macos-job:
+    runs-on: macos-latest
+    steps:
+      - name: Print OS
+        run: echo "Running on macOS"
+
+      - name: Show hostname
+        run: hostname
+
+      - name: Show current user
+        run: whoami
