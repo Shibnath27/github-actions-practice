@@ -1,0 +1,21 @@
+name: Runner Tools Check
+
+on:
+  push:
+
+jobs:
+  check-tools:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Docker
+        run: docker --version
+
+      - name: Check Python
+        run: python --version
+
+      - name: Check Node
+        run: node --version
+
+      - name: Check Git
+        run: git --version
