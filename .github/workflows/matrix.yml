@@ -26,6 +26,6 @@ jobs:
       - name: Show Python Version
         run: python --version
 
-      - name: Simulate failure
-        run: exit 1
-        if: matrix.python-version == '3.12'
+      #- name: Simulate failure
+      #  run: exit 1
+       # if: matrix.python-version == '3.12'
