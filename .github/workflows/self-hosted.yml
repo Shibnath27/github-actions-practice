@@ -8,6 +8,8 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Show hostname
         run: hostname
 
@@ -16,3 +18,19 @@ jobs:
 
       - name: Create test file
         run: echo "Runner test file" > runner-test.txt
+      
+
+      - name: Print greeting
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Print date and time
+        run: date
+
+      - name: Print branch name
+        run: echo "Branch name is ${{ github.ref_name }}"
+
+      - name: List files in repository
+        run: ls -la
+
+      - name: Show runner operating system
+        run: echo "Running on $RUNNER_OS"
